@@ -1,6 +1,6 @@
 <div id="background">
-  <header class= "cf">
-    <a href="index.html" id="logo">Searchlight.fm</a>
+  <header class="cf">
+    <%= link_to "Searchlight.FM", root_path, id: "logo" %>
       <nav>
         <ul>
           <% unless podcast_signed_in?%>
