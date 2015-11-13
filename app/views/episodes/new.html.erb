@@ -1,0 +1,23 @@
+
+<div id="form">
+   <div class="wrapper_skinny">
+    <h1>New Episode</h1>
+
+    <%= form_for ([@podcast, @episode]) do |f| %>
+
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Create Episode", class: "button button_highlight", id: "button_block" %>
+      </div>
+    <% end %>
+  </div>
+</div>
