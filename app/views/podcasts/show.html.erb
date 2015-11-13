@@ -2,7 +2,7 @@
   <div id="show_banner">
     <div class="wrapper_skinny">
       <h1><%= @podcast.title %></h1>
-      <p class="description"><%= @podcast.description %></p>
+        <p class="description"><%= @podcast.description %></p>
       <% unless @podcast.itunes.blank? %>
         <a href="<%= @podcast.itunes %>" class="subscribe_link">itunes </a>
       <% end %>
@@ -14,6 +14,7 @@
       <% end %>
     </div>
   </div>
+
   <div id="breadcrumb">
     <%= link_to podcasts_path do %>
       All Podcasts
@@ -42,6 +43,8 @@
     </div>
   </div>
 </div>
+
+
 
 <div class="pagination">
   <span class="previous_page disabled">Previous</span>

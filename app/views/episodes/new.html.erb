@@ -1,23 +1,42 @@
+<div id="podcast_show">
+  <div id="show_banner">
+    <div class="wrapper_skinny">
+      <h1>The Searchlight Podcast</h1>
+    </div>
+  </div>
 
-<div id="form">
-   <div class="wrapper_skinny">
-    <h1>New Episode</h1>
+  <div id="links">
+    <div class="wrapper_skinny">
+      <ul>
+        <li><% link_to "Episodes", root_path %></li>
+        <li><%= link_to "New Episode", new_podcast_episode_path(@podcast), class: "current" %></li>
+        <li><%= link_to "Account Settings", edit_podcast_registration_path%></li>
+        <li><%= link_to "View Podcast", podcast_path(current_podcast)%></li>
+      </ul>
+    </div>
+  </div>
 
-    <%= form_for ([@podcast, @episode]) do |f| %>
 
-      <div class="field">
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-      </div>
+  <div id="form">
+     <div class="wrapper_skinny">
+      <h1>New Episode</h1>
 
-      <div class="field">
-        <%= f.label :description %>
-        <%= f.text_area :description %>
-      </div>
+      <%= form_for ([@podcast, @episode]) do |f| %>
 
-      <div class="actions">
-        <%= f.submit "Create Episode", class: "button button_highlight", id: "button_block" %>
-      </div>
-    <% end %>
+        <div class="field">
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+        </div>
+
+        <div class="field">
+          <%= f.label :description %>
+          <%= f.text_area :description %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Create Episode", class: "button button_highlight", id: "button_block" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
