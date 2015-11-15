@@ -7,10 +7,10 @@
         <a href="<%= @podcast.itunes %>" class="subscribe_link">itunes </a>
       <% end %>
       <% unless @podcast.stitcher.blank? %>
-        <a href="<%= @podcast.stitcher %>" class="subscribe_link" >itunes </a>
+        <a href="<%= @podcast.stitcher %>" class="subscribe_link" >Stitcher </a>
       <% end %>
       <% unless @podcast.podbay.blank? %>
-        <a href="<%= @podcast.podbay %>" class="subscribe_link" >itunes </a>
+        <a href="<%= @podcast.podbay %>" class="subscribe_link" >Podbay </a>
       <% end %>
     </div>
   </div>
@@ -70,9 +70,7 @@
         <% @episodes.each do |episode| %>
           <li class="cf">
             <div class="episode_thumbnail">
-              <a href="#">
-                 <%= image_tag episode.episode_thumbnail.url(:medium) %>
-              </a>
+              <%= image_tag episode.episode_thumbnail.url(:medium) %>
             </div>
             <div class="episode_overview">
               <h2><%= link_to episode.title, podcast_episode_path(@podcast, episode) %></h2>
@@ -84,8 +82,6 @@
     </div>
   </div>
 </div>
-
-
 
 <script>
   $(document).ready(function(){
