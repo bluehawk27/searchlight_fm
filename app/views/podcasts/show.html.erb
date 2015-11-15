@@ -7,10 +7,10 @@
         <a href="<%= @podcast.itunes %>" class="subscribe_link">itunes </a>
       <% end %>
       <% unless @podcast.stitcher.blank? %>
-        <a href="<%= @podcast.stitcher %>" class="subscribe_link" >itunes </a>
+        <a href="<%= @podcast.stitcher %>" class="subscribe_link" >Stitcher </a>
       <% end %>
       <% unless @podcast.podbay.blank? %>
-        <a href="<%= @podcast.podbay %>" class="subscribe_link" >itunes </a>
+        <a href="<%= @podcast.podbay %>" class="subscribe_link" >Podbay </a>
       <% end %>
     </div>
   </div>
@@ -30,7 +30,7 @@
         <li class="cf">
           <div class="episode_thumbnail">
             <a href="#">
-               <%= image_tag episode.episode_thumbnail.url(:medium), class: "current_episode_thumbnail" %>
+               <%= image_tag episode.episode_thumbnail.url(:medium) %>
             </a>
           </div>
           <div class="episode_overview">
@@ -44,11 +44,4 @@
   </div>
 </div>
 
-
-
-<div class="pagination">
-  <span class="previous_page disabled">Previous</span>
-  <em class="current">1</em>
-  <a href="#">2</a>
-  <a href="" class="next_page">Next</a>
-</div>
+<%= will_paginate @episodes %>
