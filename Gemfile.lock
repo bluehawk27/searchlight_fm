@@ -88,6 +88,8 @@ GEM
       activesupport (>= 4.1.0)
     haml (4.0.7)
       tilt
+    heroku-deflater (0.6.2)
+      rack (>= 1.4.5)
     highline (1.7.8)
     httparty (0.13.5)
       json (~> 1.8)
@@ -227,6 +229,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise (~> 3.5, >= 3.5.2)
+  heroku-deflater
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.3, >= 4.3.1)
