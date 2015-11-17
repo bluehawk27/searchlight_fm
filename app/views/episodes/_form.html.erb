@@ -1,4 +1,4 @@
-<%= form_for ([:podcast, :episode]) do |f| %>
+<%= form_for ([podcast, episode]) do |f| %>
   <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title %>
@@ -20,6 +20,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Submit", class: "button button_highlight", id: "button_block" %>
+    <%= f.submit "Submit", class: "button button-highlight", id: "button-block" %>
   </div>
 <% end %>

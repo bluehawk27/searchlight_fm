@@ -1,12 +1,12 @@
-<div id="podcast_show">
-  <div id="show_banner">
-    <div class="wrapper_skinny">
+<div id="podcast-show">
+  <div id="show-banner">
+    <div class="wrapper-skinny">
       <h1><%= @podcast.title %></h1>
     </div>
   </div>
 
   <div id="links">
-    <div class="wrapper_skinny">
+    <div class="wrapper-skinny">
       <ul>
         <li><%= link_to "Episodes", root_path %></li>
         <li><%= link_to "New Episode", new_podcast_episode_path(@podcast)%></li>
@@ -19,7 +19,7 @@
 
 
 <div id="form">
-  <div class="wrapper_skinny">
+  <div class="wrapper-skinny">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
 
@@ -80,7 +80,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "Update", class: "button button_highlight", id: "button_block" %>
+        <%= f.submit "Update", class: "button button-highlight", id: "button-block" %>
       </div>
     <% end %>
 
@@ -88,6 +88,6 @@
 
     <h2>Cancel my account</h2>
 
-    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button button_highlight", id: "button_block" %></p>
+    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button button-highlight", id: "button-block" %></p>
   </div>
 </div>

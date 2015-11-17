@@ -1,12 +1,12 @@
-<div id="podcast_show">
-  <div id="show_banner">
-    <div class="wrapper_skinny">
+<div id="podcast-show">
+  <div id="show-banner">
+    <div class="wrapper-skinny">
       <h1>The Searchlight Podcast</h1>
     </div>
   </div>
 
   <div id="links">
-    <div class="wrapper_skinny">
+    <div class="wrapper-skinny">
       <ul>
         <li><% link_to "Episodes", root_path %></li>
         <li><%= link_to "New Episode", new_podcast_episode_path(@podcast), class: "current" %></li>
@@ -18,7 +18,7 @@
 
 
   <div id="form">
-     <div class="wrapper_skinny">
+     <div class="wrapper-skinny">
       <h1>New Episode</h1>
         <%= render 'form', :episode => @episode, :podcast => @podcast %>
     </div>

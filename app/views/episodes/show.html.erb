@@ -1,16 +1,16 @@
-<div id="podcast_show">
-  <div id="show_banner">
-    <div class="wrapper_skinny">
+<div id="podcast-show">
+  <div id="show-banner">
+    <div class="wrapper-skinny">
       <h1><%= @podcast.title %></h1>
         <p class="description"><%= @podcast.description %></p>
       <% unless @podcast.itunes? %>
-        <a href="<%= @podcast.itunes %>" class="subscribe_link">itunes </a>
+        <a href="<%= @podcast.itunes %>" class="subscribe-link">itunes </a>
       <% end %>
       <% unless @podcast.stitcher? %>
-        <a href="<%= @podcast.stitcher %>" class="subscribe_link" >Stitcher </a>
+        <a href="<%= @podcast.stitcher %>" class="subscribe-link" >Stitcher </a>
       <% end %>
       <% unless @podcast.podbay? %>
-        <a href="<%= @podcast.podbay %>" class="subscribe_link" >Podbay </a>
+        <a href="<%= @podcast.podbay %>" class="subscribe-link" >Podbay </a>
       <% end %>
     </div>
   </div>
@@ -24,9 +24,9 @@
     <% end %>
   </div>
 
-  <div id="episode_content">
-    <div class="wrapper_skinny">
-      <%= image_tag @episode.episode_thumbnail.url(:medium), class: "current_episode_thumbnail" %>
+  <div id="episode-content">
+    <div class="wrapper-skinny">
+      <%= image_tag @episode.episode_thumbnail.url(:medium), class: "current-episode-thumbnail" %>
         <h2><%= @episode.title %></h2>
         <p class="description"><%= @episode.description %></p>
         <div id="jquery_jplayer_1" class="jp-jplayer"></div>
@@ -65,14 +65,14 @@
   </div>
 
   <div id="episodes">
-    <div class="wrapper_skinny">
+    <div class="wrapper-skinny">
       <ul class="cf">
         <% @episodes.each do |episode| %>
           <li class="cf">
-            <div class="episode_thumbnail">
+            <div class="episode-thumbnail">
               <%= image_tag episode.episode_thumbnail.url(:medium) %>
             </div>
-            <div class="episode_overview">
+            <div class="episode-overview">
               <h2><%= link_to episode.title, podcast_episode_path(@podcast, episode) %></h2>
               <p class="description"><%= truncate(episode.description, length: 160) %></p>
             </div>
