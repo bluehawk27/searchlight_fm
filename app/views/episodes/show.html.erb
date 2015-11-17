@@ -3,13 +3,13 @@
     <div class="wrapper_skinny">
       <h1><%= @podcast.title %></h1>
         <p class="description"><%= @podcast.description %></p>
-      <% unless @podcast.itunes.blank? %>
+      <% unless @podcast.itunes? %>
         <a href="<%= @podcast.itunes %>" class="subscribe_link">itunes </a>
       <% end %>
-      <% unless @podcast.stitcher.blank? %>
+      <% unless @podcast.stitcher? %>
         <a href="<%= @podcast.stitcher %>" class="subscribe_link" >Stitcher </a>
       <% end %>
-      <% unless @podcast.podbay.blank? %>
+      <% unless @podcast.podbay? %>
         <a href="<%= @podcast.podbay %>" class="subscribe_link" >Podbay </a>
       <% end %>
     </div>
