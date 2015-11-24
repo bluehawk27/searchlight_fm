@@ -15,6 +15,7 @@ gem 'paperclip', '~> 4.3', '>= 4.3.1'
 gem 'aws-sdk', '<2.0'
 gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 gem "rails_best_practices"
+gem 'searchkick', '~> 1.0', '>= 1.0.2'
 
 group :development, :test do
   gem 'byebug'
