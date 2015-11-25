@@ -1,4 +1,4 @@
-<div id="podcast-show">
+<div id="podcast-show" data-turbolinks-temporary>
   <div id="show-banner">
     <div class="wrapper-skinny">
       <h1><%= @podcast.title %></h1>
@@ -14,6 +14,7 @@
       <% end %>
     </div>
   </div>
+
   <div id="breadcrumb">
     <%= link_to podcasts_path do %>
       All Podcasts
