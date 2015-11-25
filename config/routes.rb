@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   devise_for :podcasts
 
   resources :podcasts, only: [:index, :show] do
-    resources :episodes, except: [:index]
+    resources :episodes, except: [:index] do
+      collection do
+        get 'search'
+      end
+    end
   end
 
   authenticated :podcast do

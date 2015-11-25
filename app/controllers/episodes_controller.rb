@@ -1,11 +1,19 @@
 class EpisodesController < ApplicationController
-  before_action :authenticate_podcast!, except: [:show]
-  before_action :require_permission, except: [:show]
+  before_action :authenticate_podcast!, except: [:show, :search]
+  before_action :require_permission, except: [:show, :search]
   before_action :find_podcast
   before_action :find_episode, only: [:show, :edit, :update, :destroy]
 
   def new
     @episode = @podcast.episodes.new
+  end
+
+  def search
+    if params[:search].present?
+      @episodes = Episode.search(params[:search])
+    else
+      redirect_to podcasts_path
+    end
   end
 
   def show
