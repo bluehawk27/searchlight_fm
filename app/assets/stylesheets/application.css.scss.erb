@@ -1,9 +1,11 @@
-@import 'normalize';
-
 $white: #FFFFFF;
 $highlight: #d2674e;
 $dark: #22292e;
 $light: #EDEFF5;
+@import 'normalize';
+@import 'welcome';
+@import 'podcasts';
+
 
 body{
   font-family: 'Open Sans', sans-serif;
@@ -222,22 +224,38 @@ textarea {
   padding: 0 0 3rem 0
 }
 
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 319px) and (max-device-width : 480px) {
   #background {
     header {
+      padding: 1rem 0;
       #logo {
         width: 100%;
         text-align: center;
+        margin: 0 0 .75rem 0;
+        font-size: 2rem;
       }
       nav {
         ul {
-          text-align: center;
-          padding: none;
+          padding-left: 3rem;
+          font-size: 1.25rem;
+          li {
+            margin-right: 4rem;
+          }
         }
-
       }
-
+    }
+    .wrapper-skinny {
+      h1 {
+        font-size: 2rem;
+      }
+      a {
+        width: 100%;
+        margin-left: -2.25rem;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem 2rem;
+      }
     }
   }
 }
@@ -248,5 +266,3 @@ textarea {
 
 }
 
-@import 'welcome';
-@import 'podcasts';
