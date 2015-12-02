@@ -13,7 +13,7 @@
         <a href="<%= @podcast.podbay %>" class="subscribe-link" >Podbay </a>
       <% end %>
 
-      <div id="search">
+      <div id="search" class="cf">
         <%= form_tag search_podcast_episodes_path(@podcast), method: :get, role: "Search" do %>
           <div class="search-field">
             <%= text_field_tag :search, params[:search] %>

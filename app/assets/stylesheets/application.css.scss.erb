@@ -226,7 +226,9 @@ textarea {
 
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 319px) and (max-device-width : 570px) {
+@media only screen and (min-device-width : 319px) and (max-device-width : 649px) {
+
+//--------------Welcome Page--------//-----------//
   #background {
     header {
       padding: 1rem 0;
@@ -249,6 +251,7 @@ textarea {
     .wrapper-skinny {
       h1 {
         font-size: 2rem;
+
       }
       a {
         width: 100%;
@@ -258,6 +261,9 @@ textarea {
       }
     }
   }
+
+
+//-----------------Main Application Header -----------//
 
   #main-header {
     .wrapper-wide {
@@ -271,7 +277,8 @@ textarea {
         text-align: center;
         ul {
           li {
-            margin-right: 4rem;
+            margin-right: 3rem;
+            font-size: 1.25rem
           }
         }
       }
@@ -284,7 +291,47 @@ textarea {
       font-size: 2rem;
     }
   }
+
+//--------------Podcast#index------------//
+  #podcasts {
+    .wrapper {
+      ul {
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+//--------------Podcast#show------------//
+  #podcast-show {
+    .wrapper-skinny{
+       width: 90%;
+    }
+    #show-banner {
+      h1{
+        font-size: 2rem;
+      }
+      .description {
+        width: 100%;
+        margin: 0 0 0 0;
+      }
+
+      #search {
+        .search-field{
+          margin: 1rem 0 1rem 0;
+          width: 90%;
+          .submit {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
 }
+
+
+
 
 
 
@@ -294,7 +341,7 @@ textarea {
 
 /*----------------tablets------------------*/
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-device-width : 650px) and (max-device-width : 1024px) {
 
 }
 
