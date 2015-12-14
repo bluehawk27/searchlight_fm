@@ -18,6 +18,8 @@ gem "rails_best_practices"
 gem 'searchkick', '~> 1.0', '>= 1.0.2'
 
 group :development, :test do
+  gem 'rspec-rails', '~> 3.4'
+  gem 'capybara', '~> 2.5'
   gem 'byebug'
 end
 
